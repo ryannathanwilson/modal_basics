@@ -6,7 +6,7 @@ const ModalButtonStyled = styled.div`
 	height: 100px;
 	border: 1px solid grey;
 	radius: .5rem;
-	background: white;
+	background: red;
 	color: black;
 	cursor: pointer;
 `;

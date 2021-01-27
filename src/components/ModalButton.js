@@ -18,7 +18,7 @@ function ModalButton(props) {
     }
     return (
         <div>
-            <ModalButtonStyled onClick={openModal}>My Modal</ModalButtonStyled>
+            <ModalButtonStyled role="button" onClick={openModal}>My Modal</ModalButtonStyled>
             <Modal
                 modalIsOpen={modalIsOpen}
                 closeClose={closeClose}

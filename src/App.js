@@ -16,6 +16,9 @@ function App() {
         Updated 11 January 2021
         </a>
       <ModalButton />
+      <ModalButton />
+      <ModalButton />
+      <ModalButton />
     </div>
   );
 }

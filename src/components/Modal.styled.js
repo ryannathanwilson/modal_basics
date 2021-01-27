@@ -18,7 +18,7 @@ const ModalStyled = styled.div`
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-color: rgba(0,0,0,.5);
+		background-color: rgba(255,255,255,.5);
 		z-index: 1;
 	}
 	.modal {
@@ -26,18 +26,24 @@ const ModalStyled = styled.div`
 		position: relative;
 		width: 500px;
 		height: 400px;
-		background-color: blue;
+		background-color: white;
 		z-index: 2;
+        box-shadow: 0 0 5rem 1rem rgba(0,0,0,.3);
+		color: red;
 		.close-button {
 			display: block;
-			position: relative;
-			height: 50px;
-			width: 100px;
+			position: absolute;
+            top: .5rem;
+            right: .5rem;
+            border-radius: .2rem;
+			height: 1.5rem;
+			width: 1.5rem;
 			background-color: grey;
 			color: white;
-			size: 2rem;
+			size: 1rem;
 			z-index: 3;
 			cursor: pointer;
+            padding-left: .4rem;
 		}
 	}
     }

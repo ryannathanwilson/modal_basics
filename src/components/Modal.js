@@ -16,7 +16,7 @@ const Modal = (props) => {
                     className="close-button"
                     onClick={closeClose}
                 >
-                    Close Modal
+                    X
                 </div>
             </div>
         </ModalStyled>
