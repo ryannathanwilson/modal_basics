@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import ModalStyled from "./Modal.styled"
 
 const Modal = (props) => {
-    function closeClose() {
-        props.closeClose();
+    function closeClose(e) {
+        if (e.key === "Escape") {
+            props.closeClose();
+            window.removeEventListener('keydown',closeClose);
+        }
     }
+    useEffect(() => {
+        window.addEventListener('keydown', closeClose);
+    });
     const MyModal = (
         <ModalStyled modalIsOpen={props.modalIsOpen}>
             <div className="backdrop" onClick={props.closeBackdrop}></div>
