@@ -1,16 +1,31 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
+import ModalButtonStyled from "./ModalButton.styled"
 
 function ModalButton(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    function toggleModal() {
-        console.log("clicked");
-        setModalIsOpen(!modalIsOpen);
+    function openModal() {
+        console.log("opened with modal button");
+        setModalIsOpen(true);
+    }
+    function closeClose() {
+        console.log("close with close button");
+        setModalIsOpen(false);
+    }
+    function closeBackdrop() {
+        console.log("close with backdrop");
+        setModalIsOpen(false);
     }
     return (
         <div>
-            <div onClick={toggleModal}>My Modal</div>
-            <Modal modalIsOpen={modalIsOpen} toggle={toggleModal}></Modal>
+            <ModalButtonStyled onClick={openModal}>My Modal</ModalButtonStyled>
+            <Modal
+                modalIsOpen={modalIsOpen}
+                closeClose={closeClose}
+                closeBackdrop={closeBackdrop}
+            >
+				Stuff in the Modal
+			</Modal>
         </div>
     );
 }
