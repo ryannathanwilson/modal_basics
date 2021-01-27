@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ModalStyled from "./Modal.styled"
 
 const Modal = (props) => {
     function closeClose() {
         props.closeClose();
     }
     const MyModal = (
-        <div id="modal" className={props.modalIsOpen ? "show" : "hide"}>
+        <ModalStyled modalIsOpen={props.modalIsOpen}>
             <div className="backdrop" onClick={props.closeBackdrop}></div>
             <div className="modal">
                 {props.children}
@@ -18,7 +19,7 @@ const Modal = (props) => {
                     Close Modal
                 </div>
             </div>
-        </div>
+        </ModalStyled>
     );
     return ReactDOM.createPortal(
         MyModal,
